@@ -322,6 +322,10 @@ MIDDLEWARE_CLASSES = [
     'dnt.middleware.DoNotTrackMiddleware',
 ]
 
+ENABLE_CSP_MIDDLEWARE = config('ENABLE_CSP_MIDDLEWARE', default=False, cast=bool)
+if ENABLE_CSP_MIDDLEWARE:
+    MIDDLEWARE_CLASSES.append('csp.middleware.CSPMiddleware')
+
 INSTALLED_APPS = (
     'cronjobs',  # for ./manage.py cron * cmd line tasks
 
@@ -1059,3 +1063,37 @@ B2G_DROID_URL = 'https://d2yw7jilxa8093.cloudfront.net/B2GDroid-mozilla-central-
 MOZILLA_LOCATION_SERVICES_KEY = 'ec4d0c4b-b9ac-4d72-9197-289160930e14'
 
 DEAD_MANS_SNITCH_URL = config('DEAD_MANS_SNITCH_URL', default=None)
+
+# Django-CSP
+CSP_DEFAULT_SRC = (
+    "'self'",
+)
+CSP_FONT_SRC = (
+    "'self'",
+    'http://*.mozilla.net',
+    'https://*.mozilla.net',
+    'http://*.mozilla.org',
+    'https://*.mozilla.org',
+)
+CSP_IMG_SRC = (
+    "'self'",
+    'http://*.mozilla.net',
+    'https://*.mozilla.net',
+    'http://*.mozilla.org',
+    'https://*.mozilla.org',
+)
+CSP_SCRIPT_SRC = (
+    "'self'",
+    'http://*.mozilla.org',
+    'https://*.mozilla.org',
+    'http://*.mozilla.net',
+    'https://*.mozilla.net',
+)
+CSP_STYLE_SRC = (
+    "'self'",
+    "'unsafe-inline'",
+    'http://*.mozilla.org',
+    'https://*.mozilla.org',
+    'http://*.mozilla.net',
+    'https://*.mozilla.net',
+)
