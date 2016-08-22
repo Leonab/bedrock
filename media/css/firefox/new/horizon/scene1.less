@@ -499,3 +499,59 @@ html.show-refresh {
         }
     }
 }
+
+// /all modal tests
+#fx-all-modal-wrapper {
+    display: none;
+}
+
+#fx-all-modal {
+    margin-top: 40px;
+}
+
+#fx-all-modal-content {
+    background: #fff;
+    border-radius: 6px;
+    color: @textColorPrimary;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin-left: 0;
+        }
+    }
+
+    h3,
+    h4 {
+        color: @textColorPrimary;
+    }
+
+    h4 {
+        margin-top: 20px;
+    }
+
+    .fx-privacy-link {
+        a:link,
+        a:visited {
+            color: @linkBlue;
+        }
+    }
+}
+
+#fx-all-modal-direct-downloads {
+    li {
+        margin: 0 5px 10px 0;
+
+        a {
+            .font-size(@largeFontSize);
+            padding: 5px 15px;
+        }
+    }
+}
