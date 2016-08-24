@@ -25,7 +25,6 @@ PIPELINE_CSS = {
     'about-leadership': {
         'source_filenames': (
             'css/newsletter/moznewsletter-subscribe.less',
-            'css/base/mozilla-modal.less',
             'css/mozorg/leadership.less',
         ),
         'output_filename': 'css/about-leadership-bundle.css',
