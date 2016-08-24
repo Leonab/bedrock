@@ -19,7 +19,7 @@
 {% block site_header_logo %}{% endblock %}
 
 {% block content %}
-<main>
+<main role="main">
   <div class="snapshot-header">
     <div class="background">
       <span class="snap shot-four"><span></span></span>
@@ -301,8 +301,19 @@
 
           <div class="callout">
             <p>
-            {% trans %}
-              Denelle has appeared on NBC Press:Here, CNN “Quest Means Business”, Bloomberg Radio, EFE, TIME, The New York Times and Advertising Age. She defended the pro-encryption motion during a debate at the Oxford Union and has spoken at Collision, MIT EmTech Digital, Mobile World Congress and ANDICOM on data privacy, net neutrality and user choice.
+            {% trans
+                link_presshere='http://www.pressheretv.com/apple-finds-friends-in-its-battle-with-the-fbi/',
+                link_cnnquest='http://www.cnn.com/videos/tv/2016/02/24/exp-denelle-dixon-thayer-richard-quest-mozilla.cnn',
+                link_bloomberg='http://www.bloomberg.com/news/audio/2016-03-30/bloomberg-advantage-apple-case-not-just-one-phone-situation',
+                link_efe='http://www.wradio.com.co/noticias/economia/emerge-americas-reune-en-miami-beach-a-innovadores-inversores-y-politicos/20160418/nota/3110985.aspx',
+                link_time='http://time.com/4263121/apple-fbi-backdoor/',
+                link_nytimes='http://www.nytimes.com/2016/04/28/technology/with-finality-fbi-opts-not-to-share-iphone-unlocking-method.html',
+                link_adage='https://drive.google.com/open?id=0Bx2TpUdUEBxfaU53S3ZiMThUUGluQnFfWUc2emdVQ0tDcnIw',
+                link_oxford='https://www.youtube.com/watch?v=w6cQsPPw2LY',
+                link_emtech='http://www.technologyreview.com/emtech/digital/15/video/watch/bts-dixon-thayer/',
+                link_mwc='http://www.mobileworldlive.com/mwl-tv-videos/mwltv15-tuesday/fcc-keynote-preview-panel/',
+                link_andicom='https://www.youtube.com/watch?v=GlZqM3nvPEc' %}
+              Denelle has appeared on <a href="{{ link_presshere }}">NBC Press:Here</a>, <a href="{{ link_cnnquest }}">CNN “Quest Means Business”</a>, <a href="{{ link_bloomberg }}">Bloomberg Radio</a>, <a href="{{ link_efe }}">EFE</a>, <a href="{{ link_time }}">TIME</a>, <a href="{{ link_nytimes }}">The New York Times</a> and <a href="{{ link_adage }}">Advertising Age</a>. She defended the pro-encryption motion during a <a href="{{ link_ofxord }}">debate at the Oxford Union</a> and has spoken at Collision, <a href="{{ link_emtech }}">MIT EmTech Digital</a>, <a href="{{ link_mwc }}">Mobile World Congress</a> and <a href="{{ link_andicom }}">ANDICOM</a> on data privacy, net neutrality and user choice.
             {% endtrans %}
             </p>
           </div>

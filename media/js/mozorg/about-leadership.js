@@ -98,11 +98,4 @@
         }
     }
 
-    // open external links in new windows
-    $('a[rel="external"]').on('click', function(e) {
-        e.preventDefault();
-        window.open(this.href);
-    });
-
-
 })(window.jQuery, window.Mozilla);
